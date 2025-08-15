@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6f4c3e;
+    --secondary-color: #f4f1ed;
+    --accent-color: #ccab9f;
+    --text-dark: #2e2e2e;
+    --text-light: #ffffff;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition: all 0.3s ease-in-out;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --radius: 15px;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 0.5fr;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar .logo img {
+    height: 80px;
+    transition: var(--transition);
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.05);
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 10px;
+    justify-items: center;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-style: oblique;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.navbar .nav-links a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+.navbar .cart-icon button {
+    background: var(--accent-color);
+    color: var(--text-light);
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.navbar .cart-icon button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Container + Content */
+.container img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+/* .container img:hover {
+    transform: scale(1.02);
+} */
+
+.container .content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.container .content h2 {
+    font-size: 2.8em;
+    margin-top: 80px;
+}
+
+.container .content h3 {
+    font-size: 1.6em;
+    margin: 20px 0;
+}
+
+.container .content p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer div {
+    padding: 20px;
+}
+
+footer h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+footer p,
+footer .social-links a {
+    font-size: 1em;
+}
+
+footer .social-links {
+    list-style: none;
+}
+
+footer .social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+footer .social-links a:hover {
+    color: var(--text-light);
+}
+
+/* Reusable Card Style */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* About Us */
+.About-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px;
+}
+
+.About-container p {
+    font-size: 1.8em;
+}
+
+.About-container img {
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+}
+
+/* Service Page */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px;
+    text-align: center;
+}
+
+.service-container h2 {
+    font-size: 2.5em;
+    grid-column: span 3;
+}
+
+.service-container p {
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.service-container img {
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    width: 100%;
+}
+
+.service-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Menu Section */
+h2 {
+    font-size: 3em;
+    text-align: center;
+    margin: 60px 0 20px;
+}
+
+.caffe-container h3 {
+    font-size: 2em;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.Classic,
+.Signature-Drinks,
+.Seasonal-Drinks,
+.Tea-by-Song-Tea {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+    text-align: center;
+}
+
+.caffe-container p {
+    display: inline;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+/* Shop Page */
+.shop-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px;
+}
+
+.shop-container img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+}
+
+.shop-container h4 {
+    font-size: 1.8em;
+    margin: 20px 0;
+}
+
+.shop-foot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
+}
+
+.shop-foot img {
+    height: 800px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.shop-foot p {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.shop-foot button {
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 30px;
+    font-size: 1.1em;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.shop-foot button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Experience */
+.excontainer img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+}
+
+.experience-description {
+    text-align: center;
+    padding: 60px;
+}
+
+.experience-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-description h2 {
+    font-size: 2.5em;
+}
+
+.experience-description h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.experience-description p {
+    font-size: 1.2em;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Contact Us */
+h1 {
+    font-size: 3.5em;
+    font-style: italic;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px;
+}
+
+.container1 h2 {
+    font-size: 2.5em;
+
+}
+
+.container1 div h3,
+.container1 p,
+.contact-form h3 {
+    font-size: 2em;
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    gap: 20px;
+    padding: 40px;
+}
+
+form label {
+    font-size: 1.2em;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius);
+    font-size: 1em;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    grid-column: span 2;
+}
+
+
+
+
+
+
+/* Responsive for tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .navbar .nav-links {
+        grid-template-columns: repeat(5, auto);
+        gap: 5px;
+    }
+
+    .service-container,
+    .shop-container,
+    .Classic,
+    .Signature-Drinks,
+    .Seasonal-Drinks,
+    .Tea-by-Song-Tea {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .About-container,
+    .container1,
+    .shop-foot {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .shop-foot img {
+        height: auto;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive for mobile devices (≤ 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .navbar .nav-links {
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+    }
+
+    .navbar .cart-icon {
+        justify-self: center;
+        margin-top: 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 1.8em !important;
+    }
+
+    p,
+    .container .content p,
+    .experience-description p {
+        font-size: 1em;
+    }
+
+    .container .content h2 {
+        font-size: 2em;
+    }
+
+    .container .content h3 {
+        font-size: 1.3em;
+    }
+
+    .service-container,
+    .shop-container,
+    .Classic,
+    .Signature-Drinks,
+    .Seasonal-Drinks,
+    .Tea-by-Song-Tea {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    form label {
+        text-align: left;
+    }
+}
+
+/* Responsive for small phones (≤ 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .logo img {
+        height: 60px;
+    }
+
+    .navbar .cart-icon button {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    .container .content,
+    .experience-description,
+    .About-container,
+    .container1,
+    .shop-foot {
+        padding: 20px;
+    }
+
+    .shop-foot p {
+        font-size: 1.2em;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9em;
+    }
+
+    footer h3 {
+        font-size: 1.2em;
+    }
+}
